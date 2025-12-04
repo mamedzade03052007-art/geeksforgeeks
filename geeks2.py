@@ -1,14 +1,12 @@
-def leaders(arr):
-    res = []
+def isSorted(arr):
     n = len(arr)
-    for i in range(n):
-        for j in range(i + 1, n):
-            if arr[i] <= arr[j]:
-                break
-        else:
-            res.append(arr[i])
-    return res
+    for i in range(1, n):
+        if arr[i] < arr[i - 1]:
+            return False
+    return True
 if __name__ == "__main__":
-    arr = [16, 17, 4, 3, 5, 2]
-    res = leaders(arr)
-    print(" ".join(map(str, res)))
+    arr = [  ]
+    if isSorted(arr):
+        print("True")
+    else:
+        print("False")
